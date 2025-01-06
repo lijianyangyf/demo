@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CustomerInfoQuery</class>
+ <widget class="QDialog" name="CustomerInfoQuery">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>809</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QTableView" name="tableView">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>160</y>
+     <width>791</width>
+     <height>331</height>
+    </rect>
+   </property>
+   <property name="selectionMode">
+    <enum>QAbstractItemView::SelectionMode::SingleSelection</enum>
+   </property>
+   <property name="selectionBehavior">
+    <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>70</y>
+     <width>193</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <widget class="QCheckBox" name="chb_CustomerName">
+      <property name="styleSheet">
+       <string notr="true">QCheckBox::indicator {
+    width: 20px;
+    height: 10px;
+    margin: 0px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="lbl2">
+      <property name="text">
+       <string>用户姓名：</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="txt_CustomerName"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget_3">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>10</y>
+     <width>221</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_4">
+    <item>
+     <widget class="QCheckBox" name="chb_CustomerBirthday">
+      <property name="styleSheet">
+       <string notr="true">QCheckBox::indicator {
+    width: 20px;
+    height: 10px;
+    margin: 0px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="lbl4">
+      <property name="text">
+       <string>用户出生日期：</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="cbb_CustomerBirthday">
+      <item>
+       <property name="text">
+        <string>=</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>&gt;</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>&lt;</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item>
+     <widget class="QDateEdit" name="de_CustomerBirthday">
+      <property name="buttonSymbols">
+       <enum>QAbstractSpinBox::ButtonSymbols::NoButtons</enum>
+      </property>
+      <property name="displayFormat">
+       <string>yyyy/M/d</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget_4">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>40</y>
+     <width>241</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_5">
+    <item>
+     <widget class="QCheckBox" name="chb_CustomerIdentityNumber">
+      <property name="styleSheet">
+       <string notr="true">QCheckBox::indicator {
+    width: 20px;
+    height: 10px;
+    margin: 0px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="lbl5">
+      <property name="text">
+       <string>用户身份证号码：</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="txt_CustomerIdentityNumber"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget_5">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>70</y>
+     <width>241</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_6">
+    <item>
+     <widget class="QCheckBox" name="chb_CustomerTelephone">
+      <property name="styleSheet">
+       <string notr="true">QCheckBox::indicator {
+    width: 20px;
+    height: 10px;
+    margin: 0px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="lbl6">
+      <property name="text">
+       <string>用户联系电话：</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="txt_CustomerTelephone"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget_6">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>100</y>
+     <width>241</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_7">
+    <item>
+     <widget class="QCheckBox" name="chb_CustomerEmail">
+      <property name="styleSheet">
+       <string notr="true">QCheckBox::indicator {
+    width: 20px;
+    height: 10px;
+    margin: 0px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="lbl7">
+      <property name="text">
+       <string>用户电子邮箱地址：</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="txt_CustomerEmail"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget_7">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>10</y>
+     <width>241</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_9">
+    <item>
+     <widget class="QCheckBox" name="chb_CustomerAddress">
+      <property name="styleSheet">
+       <string notr="true">QCheckBox::indicator {
+    width: 20px;
+    height: 10px;
+    margin: 0px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="lbl8">
+      <property name="text">
+       <string>用户邮递地址：</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="txt_CustomerAddress"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget_8">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>40</y>
+     <width>193</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_10">
+    <item>
+     <widget class="QCheckBox" name="chb_CustomerUserName">
+      <property name="styleSheet">
+       <string notr="true">QCheckBox::indicator {
+    width: 20px;
+    height: 10px;
+    margin: 0px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="lbl9">
+      <property name="text">
+       <string>用户账户名：</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="txt_CustomerUserName"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget_9">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>70</y>
+     <width>191</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_11">
+    <item>
+     <widget class="QCheckBox" name="chb_CustomerType">
+      <property name="styleSheet">
+       <string notr="true">QCheckBox::indicator {
+    width: 20px;
+    height: 10px;
+    margin: 0px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="lbl10">
+      <property name="text">
+       <string>用户类型：</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="cbb_CustomerType">
+      <item>
+       <property name="text">
+        <string>普通用户</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>vip1用户</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>vip2用户</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>vip3用户</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget_10">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>100</y>
+     <width>221</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_12">
+    <item>
+     <widget class="QCheckBox" name="chb_CustomerRegisterDate">
+      <property name="styleSheet">
+       <string notr="true">QCheckBox::indicator {
+    width: 20px;
+    height: 10px;
+    margin: 0px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="lbl11">
+      <property name="text">
+       <string>用户注册日期：</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="cbb_CustomerRegisterDate">
+      <item>
+       <property name="text">
+        <string>=</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>&gt;</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>&lt;</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item>
+     <widget class="QDateEdit" name="de_CustomerRegisterDate">
+      <property name="buttonSymbols">
+       <enum>QAbstractSpinBox::ButtonSymbols::NoButtons</enum>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="btn_Search">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>140</y>
+     <width>56</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>查询</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_Reset">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>140</y>
+     <width>56</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>重置</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>193</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QCheckBox" name="chb_CustomerAccount">
+      <property name="styleSheet">
+       <string notr="true">QCheckBox::indicator {
+    width: 20px;
+    height: 10px;
+    margin: 0px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="lbl1">
+      <property name="text">
+       <string>用户账号：</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="txt_CustomerAccount"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>100</y>
+     <width>191</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_3">
+    <item>
+     <widget class="QCheckBox" name="chb_CustomerSex">
+      <property name="styleSheet">
+       <string notr="true">QCheckBox::indicator {
+    width: 20px;
+    height: 10px;
+    margin: 0px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="lbl3">
+      <property name="text">
+       <string>用户性别：</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="cbb_CustomerSex">
+      <item>
+       <property name="text">
+        <string>保密</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>男</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>女</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>40</y>
+     <width>193</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_13">
+    <item>
+     <widget class="QCheckBox" name="chb_CustomerPassword">
+      <property name="styleSheet">
+       <string notr="true">QCheckBox::indicator {
+    width: 20px;
+    height: 10px;
+    margin: 0px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="lbl12">
+      <property name="text">
+       <string>用户姓名：</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="txt_CustomerPassword"/>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

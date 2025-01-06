@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>398</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>信息管理</string>
+    </property>
+    <addaction name="CustomerInfoManagerment"/>
+    <addaction name="FlightInfoManagement"/>
+    <addaction name="TicketInfoManagement"/>
+    <addaction name="AnnouncementManagement"/>
+    <addaction name="ArticleManagement"/>
+    <addaction name="separator"/>
+    <addaction name="Quit"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>信息查询</string>
+    </property>
+    <addaction name="CustomerInfoQuery"/>
+    <addaction name="FlightInfoQuery"/>
+    <addaction name="TicketInfoQuery"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="CustomerInfoManagerment">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>客户信息管理</string>
+   </property>
+  </action>
+  <action name="FlightInfoManagement">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>航班信息管理</string>
+   </property>
+  </action>
+  <action name="TicketInfoManagement">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>机票信息管理</string>
+   </property>
+  </action>
+  <action name="AnnouncementManagement">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>通知管理</string>
+   </property>
+  </action>
+  <action name="ArticleManagement">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>文章管理</string>
+   </property>
+  </action>
+  <action name="Quit">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>退出</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::QuitRole</enum>
+   </property>
+  </action>
+  <action name="CustomerInfoQuery">
+   <property name="text">
+    <string>客户信息查询</string>
+   </property>
+  </action>
+  <action name="FlightInfoQuery">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>航班信息查询</string>
+   </property>
+  </action>
+  <action name="TicketInfoQuery">
+   <property name="text">
+    <string>机票信息查询</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

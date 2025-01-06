@@ -1,0 +1,709 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TicketInfoQuery</class>
+ <widget class="QDialog" name="TicketInfoQuery">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>900</width>
+    <height>525</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>30</y>
+     <width>193</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <widget class="QCheckBox" name="chb_Ticket_FlightId">
+      <property name="styleSheet">
+       <string notr="true">QCheckBox::indicator {
+    width: 20px;
+    height: 10px;
+    margin: 0px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="lbl2">
+      <property name="text">
+       <string>航班编号：</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="txt_Ticket_FlightId"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>120</y>
+     <width>191</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_3">
+    <item>
+     <widget class="QCheckBox" name="chb_Ticket_FlightState">
+      <property name="styleSheet">
+       <string notr="true">QCheckBox::indicator {
+    width: 20px;
+    height: 10px;
+    margin: 0px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="lbl3">
+      <property name="text">
+       <string>航班的飞行状态：</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="cbb_Ticket_FlightState">
+      <item>
+       <property name="text">
+        <string>已取消</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>待起飞</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>飞行中</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>已降落</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QTableView" name="tableView">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>190</y>
+     <width>891</width>
+     <height>331</height>
+    </rect>
+   </property>
+   <property name="selectionMode">
+    <enum>QAbstractItemView::SelectionMode::SingleSelection</enum>
+   </property>
+   <property name="selectionBehavior">
+    <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget_4">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>0</y>
+     <width>241</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_5">
+    <item>
+     <widget class="QCheckBox" name="chb_TicketOwnerName">
+      <property name="styleSheet">
+       <string notr="true">QCheckBox::indicator {
+    width: 20px;
+    height: 10px;
+    margin: 0px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="lbl5">
+      <property name="text">
+       <string>乘机人姓名：</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="txt_TicketOwnerName"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget_7">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>60</y>
+     <width>171</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_9">
+    <item>
+     <widget class="QCheckBox" name="chb_TicketSeatNumber">
+      <property name="styleSheet">
+       <string notr="true">QCheckBox::indicator {
+    width: 20px;
+    height: 10px;
+    margin: 0px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="lbl8">
+      <property name="text">
+       <string>机票座位号：</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="txt_TicketSeatNumber"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="btn_Search">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>150</y>
+     <width>56</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>查询</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_Reset">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>150</y>
+     <width>56</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>重置</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget_8">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>0</y>
+     <width>193</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_10">
+    <item>
+     <widget class="QCheckBox" name="chb_TicketOwnerEmail">
+      <property name="styleSheet">
+       <string notr="true">QCheckBox::indicator {
+    width: 20px;
+    height: 10px;
+    margin: 0px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="lbl9">
+      <property name="text">
+       <string>乘机人电子邮箱：</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="txt_TicketOwnerEmail"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget_9">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>30</y>
+     <width>171</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_11">
+    <item>
+     <widget class="QCheckBox" name="chb_TicketSeatType">
+      <property name="styleSheet">
+       <string notr="true">QCheckBox::indicator {
+    width: 20px;
+    height: 10px;
+    margin: 0px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="lbl10">
+      <property name="text">
+       <string>机票座位类型：</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="cbb_TicketSeatType">
+      <item>
+       <property name="text">
+        <string>经济舱</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>商务舱</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget_3">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>60</y>
+     <width>221</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_4">
+    <item>
+     <widget class="QCheckBox" name="chb_TicketOwnerBirthday">
+      <property name="styleSheet">
+       <string notr="true">QCheckBox::indicator {
+    width: 20px;
+    height: 10px;
+    margin: 0px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="lbl4">
+      <property name="text">
+       <string>乘机人出生日期：</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="cbb_TicketOwnerBirthday">
+      <item>
+       <property name="text">
+        <string>=</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>&gt;</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>&lt;</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item>
+     <widget class="QDateEdit" name="de_TicketOwnerBirthday">
+      <property name="buttonSymbols">
+       <enum>QAbstractSpinBox::ButtonSymbols::NoButtons</enum>
+      </property>
+      <property name="displayFormat">
+       <string>yyyy/M/d</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget_10">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>120</y>
+     <width>281</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_12">
+    <item>
+     <widget class="QCheckBox" name="chb_TicketPayTime">
+      <property name="styleSheet">
+       <string notr="true">QCheckBox::indicator {
+    width: 20px;
+    height: 10px;
+    margin: 0px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="lbl11">
+      <property name="text">
+       <string>机票订单生成时间：</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="cbb_TicketPayTime">
+      <item>
+       <property name="text">
+        <string>=</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>&gt;</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>&lt;</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item>
+     <widget class="QDateTimeEdit" name="dte_TicketPayTime">
+      <property name="buttonSymbols">
+       <enum>QAbstractSpinBox::ButtonSymbols::NoButtons</enum>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget_5">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>30</y>
+     <width>241</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_6">
+    <item>
+     <widget class="QCheckBox" name="chb_TicketOwnerIdentityNumber">
+      <property name="styleSheet">
+       <string notr="true">QCheckBox::indicator {
+    width: 20px;
+    height: 10px;
+    margin: 0px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="lbl6">
+      <property name="text">
+       <string>乘机人身份证号码：</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="txt_TicketOwnerIdentityNumber"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget_6">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>120</y>
+     <width>241</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_7">
+    <item>
+     <widget class="QCheckBox" name="chb_TicketOwnerTelephone">
+      <property name="styleSheet">
+       <string notr="true">QCheckBox::indicator {
+    width: 20px;
+    height: 10px;
+    margin: 0px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="lbl7">
+      <property name="text">
+       <string>乘机人电话：</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="txt_TicketOwnerTelephone"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget_11">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>0</y>
+     <width>193</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QCheckBox" name="chb_TicketId">
+      <property name="styleSheet">
+       <string notr="true">QCheckBox::indicator {
+    width: 20px;
+    height: 10px;
+    margin: 0px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="lbl1">
+      <property name="text">
+       <string>机票编号：</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="txt_TicketId"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget_12">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>60</y>
+     <width>193</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_8">
+    <item>
+     <widget class="QCheckBox" name="chb_Ticket_FlightCode">
+      <property name="styleSheet">
+       <string notr="true">QCheckBox::indicator {
+    width: 20px;
+    height: 10px;
+    margin: 0px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="lbl12">
+      <property name="text">
+       <string>航班号：</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="txt_Ticket_FlightCode"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget_13">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>90</y>
+     <width>193</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_13">
+    <item>
+     <widget class="QCheckBox" name="chb_Ticket_CustomerAccount">
+      <property name="styleSheet">
+       <string notr="true">QCheckBox::indicator {
+    width: 20px;
+    height: 10px;
+    margin: 0px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="lbl13">
+      <property name="text">
+       <string>购买账号：</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="txt_Ticket_CustomerAccount"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget_14">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>90</y>
+     <width>191</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_14">
+    <item>
+     <widget class="QCheckBox" name="chb_TicketOwnerType">
+      <property name="styleSheet">
+       <string notr="true">QCheckBox::indicator {
+    width: 20px;
+    height: 10px;
+    margin: 0px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="lbl14">
+      <property name="text">
+       <string>乘机人类型：</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="cbb_TicketOwnerType">
+      <item>
+       <property name="text">
+        <string>未成年人</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>成年人</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>老人</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget_15">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>90</y>
+     <width>201</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_15">
+    <item>
+     <widget class="QCheckBox" name="chb_TicketPayState">
+      <property name="styleSheet">
+       <string notr="true">QCheckBox::indicator {
+    width: 20px;
+    height: 10px;
+    margin: 0px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="lbl10_2">
+      <property name="text">
+       <string>机票支付状态：</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="cbb_TicketPayState">
+      <item>
+       <property name="text">
+        <string>未支付</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>已支付</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
